@@ -1,0 +1,36 @@
+﻿<Window
+    x:Class="PostcardCollectionManager.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PostcardCollectionManager"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="Transparent">
+        <NavigationView x:Name="MainNavigationView" Header="Postcards Collection Manager"
+                        SelectionChanged="MainNavigationView_SelectionChanged"
+                        IsBackButtonVisible="Collapsed" IsSettingsVisible="False" Background="Transparent" Margin="0">
+            <NavigationView.MenuItems>
+                <NavigationViewItem Content="Postcards" ToolTipService.ToolTip="Postcards"
+                                    Tag="PostcardsListingPage">
+                    <NavigationViewItem.Icon>
+                        <BitmapIcon ShowAsMonochrome="False" UriSource="/Assets/postcard.png"></BitmapIcon>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem Content="Collections" ToolTipService.ToolTip="Collections">
+                    <NavigationViewItem.Icon>
+                        <BitmapIcon ShowAsMonochrome="False" UriSource="/Assets/collection.png"></BitmapIcon>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem Content="Postcrossers" ToolTipService.ToolTip="Postcrossers"
+                                    Tag="PostcrossersListingPage">
+                    <NavigationViewItem.Icon>
+                        <BitmapIcon ShowAsMonochrome="False" UriSource="/Assets/postcrosser.png"></BitmapIcon>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+            </NavigationView.MenuItems>
+            <Frame x:Name="ContentFrame"></Frame>
+        </NavigationView>
+    </Grid>
+</Window>

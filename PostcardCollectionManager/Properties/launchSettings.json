@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "PostcardCollectionManager (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "PostcardCollectionManager (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
